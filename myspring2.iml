@@ -5,6 +5,9 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/bin/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/out/production/myspring2/com/hsp/ioc/beans.xml</file>
+          <file>file://$MODULE_DIR$/out/production/myspring2/com/hsp/inter/beans.xml</file>
+          <file>file://$MODULE_DIR$/out/production/myspring2/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/com/hsp/ioc/beans.xml</file>
           <file>file://$MODULE_DIR$/src/com/hsp/inter/beans.xml</file>
           <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
