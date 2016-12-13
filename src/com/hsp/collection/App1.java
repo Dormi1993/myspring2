@@ -16,5 +16,11 @@ public class App1 {
         for (String emName : department.getEmpName()){
             System.out.println(emName);
         }
+
+        System.out.println("=====通过list集合取出数据=====");
+        //list是有序的，打出来的顺序与property的ref有关
+        for (Employee e : department.getEmpList()){
+            System.out.println("name = "+e.getName());
+        }
     }
 }
