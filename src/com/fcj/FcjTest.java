@@ -7,5 +7,6 @@ public class FcjTest {
 
     public static void main(String[] args){
         System.out.println("jah");
+        System.out.println("woqu");
     }
 }
