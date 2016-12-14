@@ -1,6 +1,7 @@
 package com.hsp.collection;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by dormi.fu on 2016/12/13.
@@ -9,6 +10,15 @@ public class Department {
     private String name;
     private String[] empName;//也可以是int类型的数组
     private List<Employee> empList;
+    private Set<Employee> empSet;
+
+    public Set<Employee> getEmpSet() {
+        return empSet;
+    }
+
+    public void setEmpSet(Set<Employee> empSet) {
+        this.empSet = empSet;
+    }
 
     public List<Employee> getEmpList() {
         return empList;

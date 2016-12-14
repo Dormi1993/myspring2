@@ -18,15 +18,23 @@
 			<value>大大明</value>
 		</list>
 	</property>
+	<!--给list注入值-->
 	<property name="empList">
 		<list>
 			<ref bean="emp1"/>
 			<ref bean="emp2"/>
 		</list>
 	</property>
+	<!--给set注入值-->
+	<property name="empSet">
+		<set>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+		</set>
+	</property>
 
 </bean>
-<!--给list注入值-->
+
 <bean id="emp1" class="com.hsp.collection.Employee">
 	<property name="name" value="北京"/>
 </bean>

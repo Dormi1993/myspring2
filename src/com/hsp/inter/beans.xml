@@ -7,15 +7,20 @@
 				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
 				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-<!-- <bean id="changeLetter" class="com.hsp.inter.UpperLettter">
+<bean id="changeLetter" class="com.hsp.inter.UpperLettter">
 <property name="str">
 <value>abcef</value>
 </property>
 
-</bean> -->
+</bean>
 
-<bean id="changeLetter" class="com.hsp.inter.LowwerLetter">
+<!--<bean id="changeLetter" class="com.hsp.inter.LowwerLetter">
 <property name="str" value="GADG" />
 
-</bean>
+</bean>-->
+
+<!--<bean id="changeLetter" class="com.hsp.inter.ChangeLetter">//interface不能在class里面
+<property name="str" value="GADG" />
+</bean>-->
+
 </beans>

@@ -22,5 +22,11 @@ public class App1 {
         for (Employee e : department.getEmpList()){
             System.out.println("name = "+e.getName());
         }
+
+        System.out.println("=====通过set集合取出数据=====");
+        for (Employee e :department.getEmpSet()){
+            System.out.println(e.getName());
+        }
+
     }
 }

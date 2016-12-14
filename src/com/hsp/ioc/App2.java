@@ -11,19 +11,22 @@ public class App2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//´ÓApplicationContextÖÐÈ¡bean
+		//ï¿½ï¿½ApplicationContextï¿½ï¿½È¡bean
 		ApplicationContext ac=new ClassPathXmlApplicationContext("com/hsp/ioc/beans.xml");
-		//µ±ÎÒÃÇÈ¥ÊµÀý»¯bean.xml£¬¸ÃÎÄ¼þÖÐÅäÖÃµÄbean±»ÊµÀý»¯£¨¸ÃbeanµÄscopeÊÇsingleton£©
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥Êµï¿½ï¿½ï¿½ï¿½bean.xmlï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½beanï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½beanï¿½ï¿½scopeï¿½ï¿½singletonï¿½ï¿½
 		
-		//»ñÈ¡Á½¸östudent
+		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½student
 		Student s1=(Student) ac.getBean("student1");
 		Student s2=(Student) ac.getBean("student1");
+		System.out.println(s2.getName());
 
 		System.out.println(s1+" "+s2);
 		
-		//´ÓbeanfactoryÈ¥ÊµÀý»¯
-//		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("com/hsp/ioc/beans.xml"));
+		//ï¿½ï¿½beanfactoryÈ¥Êµï¿½ï¿½ï¿½ï¿½
+/*		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("com/hsp/ioc/beans.xml"));
 //		factory.getBean("student1");
+		Student s3 = (Student) factory.getBean("student1");
+		System.out.println(s3);*/
 
 
 	}
