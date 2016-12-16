@@ -18,29 +18,45 @@
 			<value>大大明</value>
 		</list>
 	</property>
-	<!--给list注入值-->
+	<!--给list注入值，可以重复-->
 	<property name="empList">
 		<list>
 			<ref bean="emp1"/>
 			<ref bean="emp2"/>
+			<ref bean="emp2"/>
+			<ref bean="emp2"/>
+			<ref bean="emp1"/>
 		</list>
 	</property>
-	<!--给set注入值-->
+	<!--给set注入值，不能有相同的对象，会覆盖-->
 	<property name="empSet">
 		<set>
 			<ref bean="emp1"/>
 			<ref bean="emp2"/>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
 		</set>
+	</property>
+	<!--给map注入值，会覆盖，但只要key不一样就不会被覆盖，就可以装配value-->
+	<property name="empMaps">
+		<map>
+			<entry key="1" value-ref="emp1"/>
+			<entry key="2" value-ref="emp2"/>
+			<entry key="2" value-ref="emp1"/>
+
+		</map>
 	</property>
 
 </bean>
 
 <bean id="emp1" class="com.hsp.collection.Employee">
 	<property name="name" value="北京"/>
+	<property name="id" value="1"/>
 </bean>
 
 <bean id="emp2" class="com.hsp.collection.Employee">
 	<property name="name" value="天津"/>
+	<property name="id" value="2"/>
 </bean>
 
 

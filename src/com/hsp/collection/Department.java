@@ -1,6 +1,7 @@
 package com.hsp.collection;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -11,6 +12,15 @@ public class Department {
     private String[] empName;//也可以是int类型的数组
     private List<Employee> empList;
     private Set<Employee> empSet;
+    private Map<String, Employee> empMaps;
+
+    public Map<String, Employee> getEmpMaps() {
+        return empMaps;
+    }
+
+    public void setEmpMaps(Map<String, Employee> empMaps) {
+        this.empMaps = empMaps;
+    }
 
     public Set<Employee> getEmpSet() {
         return empSet;
