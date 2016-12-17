@@ -9,5 +9,6 @@ public class FcjTest {
         System.out.println("jah");
         System.out.println("woqu");
         System.out.println("1214");
+        System.out.println("ha");
     }
 }
