@@ -7,9 +7,21 @@
 				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
 				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-<bean id="personService" class="com.hsp.beanlife.PersonService">
+<bean id="personService" destroy-method="mydestroy" init-method="init" class="com.hsp.beanlife.PersonService">
+	<!--这里注入我们属性，前提就是有setName才能够成功-->
 	<property name="name">
 		<value>xiaoming</value>
 	</property>
 </bean>
+
+<!--<bean id="personService2" class="com.hsp.beanlife.PersonService">
+	&lt;!&ndash;这里注入我们属性，前提就是有setName才能够成功&ndash;&gt;
+	<property name="name">
+		<value>xiaoming</value>
+	</property>
+</bean>-->
+
+
+<!--配置我们自己的后置处理器（有点类似我们的filter）-->
+<bean id="myBeanPostProcessor" class="com.hsp.beanlife.MyBeanPostProcessor" />
 </beans>
