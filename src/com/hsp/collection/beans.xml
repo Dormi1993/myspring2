@@ -46,6 +46,13 @@
 
 		</map>
 	</property>
+	<!--给属性集合配置-->
+	<property name="pp">
+		<props>
+			<prop key="pp1">abcd</prop>
+			<prop key="pp2">hello</prop>
+		</props>
+	</property>
 
 </bean>
 

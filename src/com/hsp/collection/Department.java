@@ -2,6 +2,7 @@ package com.hsp.collection;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 /**
@@ -9,10 +10,19 @@ import java.util.Set;
  */
 public class Department {
     private String name;
-    private String[] empName;//也可以是int类型的数组
-    private List<Employee> empList;
-    private Set<Employee> empSet;
-    private Map<String, Employee> empMaps;
+    private String[] empName;//数组，也可以是int类型的数组
+    private List<Employee> empList;//list集合
+    private Set<Employee> empSet;//set集合
+    private Map<String, Employee> empMaps;//map集合
+    private Properties pp;//properties的使用
+
+    public Properties getPp() {
+        return pp;
+    }
+
+    public void setPp(Properties pp) {
+        this.pp = pp;
+    }
 
     public Map<String, Employee> getEmpMaps() {
         return empMaps;

@@ -3,8 +3,10 @@ package com.hsp.collection;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by dormi.fu on 2016/12/13.
@@ -48,6 +50,25 @@ public class App1 {
             System.out.println(entry1.getKey() + " " + entry1.getValue().getName());
 
 
+        }
+
+        System.out.println("======通过properties取出数据");
+        Properties pp = department.getPp();
+//        System.out.println(pp.get("pp1".toString()));
+        for (Map.Entry<Object, Object> entry : pp.entrySet()){
+            System.out.println(entry.getKey().toString() + " " + entry.getValue().toString());
+        }
+
+        //通过枚举
+        System.out.println("=====通过Enumeration取出====");
+//        Enumeration en = pp.elements();
+        Enumeration en = pp.keys();
+
+        while (en.hasMoreElements()){
+//            Map.Entry<Object, Object> element = (Map.Entry<Object, Object>) en.nextElement();
+//            System.out.println(element.getKey() + " " + element.getValue());
+            String key = (String) en.nextElement();
+            System.out.println(key + " " + pp.getProperty(key));
         }
 
     }
