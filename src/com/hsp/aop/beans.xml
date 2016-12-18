@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+		default-autowire="byName">
+
+	<!--配置被代理的对象-->
+<bean id="Test1Service" class="com.hsp.aop.Test1Service">
+	<property name="name" value="顺平"/>
+
+</bean>
+
+	<!--配置前置通知-->
+<bean id="MyMethodBeforeAdvice" class="com.hsp.aop.MyMethodBeforeAdvice"/>
+
+
+
+	<!--配置代理对象-->
+<bean id="ProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+	<!--代理接口集-->
+	<property name="proxyInterfaces">
+		<list>
+			<value>TestServiceInter</value>
+		</list>
+	</property>
+	<!--把通知织入到代理对象-->
+	<property name="interceptorNames">
+		<!--相当于把MyMethodBeforeAdvice前置对象和代理对象关联，我们也可以把通知看成拦截器，
+		Struts2的核心就是拦截器（和过滤器没啥大区别）-->
+		<value>MyMethodBeforeAdvice</value>
+	</property>
+	<!--配置被代理对象-->
+
+</bean>
+
+</beans>

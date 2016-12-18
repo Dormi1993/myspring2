@@ -1,12 +1,12 @@
 package com.hsp.ioc;
 
-//java类都有一个默认的无参构造函数
+//java锟洁都锟斤拷一锟斤拷默锟较碉拷锟睫参癸拷锟届函锟斤拷
 public class Student {
 	
 	String name;
 	
 	public Student(){
-		System.out.println("student被创建");
+		System.out.println("student锟斤拷锟斤拷锟斤拷");
 	}
 
 	public String getName() {

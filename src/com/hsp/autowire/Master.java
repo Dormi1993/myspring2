@@ -7,6 +7,11 @@ public class Master {
     private String name;
     private Dog dog;
 
+//    public Master(Dog dog){
+//        System.out.println("Master(Dog dog)");
+//        this.dog = dog;
+//    }
+
     public String getName() {
         return name;
     }
