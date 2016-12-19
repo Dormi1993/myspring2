@@ -9,7 +9,7 @@
 		default-autowire="byName">
 
 	<!--配置被代理的对象-->
-<bean id="Test1Service" class="com.hsp.aop.Test1Service">
+<bean id="test1Service" class="com.hsp.aop.Test1Service">
 	<property name="name" value="顺平"/>
 
 </bean>
@@ -20,11 +20,12 @@
 
 
 	<!--配置代理对象-->
-<bean id="ProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
 	<!--代理接口集-->
 	<property name="proxyInterfaces">
 		<list>
-			<value>TestServiceInter</value>
+			<value>com.hsp.aop.TestServiceInter</value>
+			<value>com.hsp.aop.TestServiceInter2</value>
 		</list>
 	</property>
 	<!--把通知织入到代理对象-->
@@ -33,7 +34,8 @@
 		Struts2的核心就是拦截器（和过滤器没啥大区别）-->
 		<value>MyMethodBeforeAdvice</value>
 	</property>
-	<!--配置被代理对象-->
+	<!--配置被代理对象，可以指定-->
+	<property name="target" ref="test1Service"/>
 
 </bean>
 

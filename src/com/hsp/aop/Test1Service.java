@@ -3,7 +3,7 @@ package com.hsp.aop;
 /**
  * Created by dormi on 2016/12/18.
  */
-public class Test1Service implements TestServiceInter {
+public class Test1Service implements TestServiceInter, TestServiceInter2 {
 
     private String name;
 
@@ -19,5 +19,10 @@ public class Test1Service implements TestServiceInter {
     public void sayHello() {
         System.out.println("hi " + name);
 
+    }
+
+    @Override
+    public void sayBye() {
+        System.out.println("bye " + name);
     }
 }
