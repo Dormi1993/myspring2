@@ -12,7 +12,7 @@ public class Employee {
 
     }
 
-    //这个是显示的构造函数
+    //这个是显式的构造函数
     public Employee(String name, int age) {
         System.out.println("Employee(String name, int age) 函数被调用。。");
         this.name = name;

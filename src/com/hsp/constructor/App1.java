@@ -11,6 +11,6 @@ public class App1 {
         ApplicationContext ac = new ClassPathXmlApplicationContext("com/hsp/constructor/beans.xml");
 
         Employee employee = (Employee) ac.getBean("employee");
-        System.out.println(employee.getName());
+        System.out.println(employee.getName() + " " + employee.getAge());
     }
 }
