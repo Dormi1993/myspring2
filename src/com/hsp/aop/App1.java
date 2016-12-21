@@ -14,6 +14,7 @@ public class App1 {
 //        ts.sayHello();
 
         TestServiceInter ts = (TestServiceInter) ac.getBean("proxyFactoryBean");
+        System.out.println("ts 类型是 " + ts);//这里体现了动态代理技术，输出的是目标对象类型
         ts.sayHello();
         ((TestServiceInter2) ts).sayBye();
     }

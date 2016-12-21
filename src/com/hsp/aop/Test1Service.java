@@ -24,5 +24,6 @@ public class Test1Service implements TestServiceInter, TestServiceInter2 {
     @Override
     public void sayBye() {
         System.out.println("bye " + name);
+//        int i = 9/0;
     }
 }
