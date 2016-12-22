@@ -35,6 +35,16 @@
 	</property>
 
 </bean>
+	<!--定义环绕通知的切入点-->
+<bean id="myMethodInterceptorFilter" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+	<property name="advice" ref="myMethodInterceptor"/>
+	<property name="mappedNames">
+		<list>
+			<value>sayBye</value>
+		</list>
+	</property>
+
+</bean>
 
 	<!--配置代理对象-->
 <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
@@ -48,7 +58,7 @@
 	<!--把通知织入到代理对象-->
 	<property name="interceptorNames">
 		<list>
-			<!--相当于把MyMethodBeforeAdvice前置对象和代理对象关联，我们也可以把通知看成拦截器，
+			<!--相当于把MyMethodBeforeAdvice前置通知和代理对象关联，我们也可以把通知看成拦截器，
 		Struts2的核心就是拦截器（和过滤器没啥大区别）-->
 			<!--<value>MyMethodBeforeAdvice</value>-->
 			<!--使用自定义切入点来控制前置通知-->
@@ -56,7 +66,9 @@
 			<!--织入后置通知-->
 			<value>myAfterReturningAdvice</value>
 			<!--织入环绕通知-->
-			<value>myMethodInterceptor</value>
+			<!--<value>myMethodInterceptor</value>-->
+			<!--使用自定义切入点来控制环绕通知-->
+			<value>myMethodInterceptorFilter</value>
 			<!--织入异常通知-->
 			<value>myThrowsAdvice</value>
 
