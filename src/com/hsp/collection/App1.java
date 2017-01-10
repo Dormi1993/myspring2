@@ -60,6 +60,7 @@ public class App1 {
         }
 
         //通过枚举
+        System.out.println("\n");
         System.out.println("=====通过Enumeration取出====");
 //        Enumeration en = pp.elements();
         Enumeration en = pp.keys();

@@ -16,6 +16,7 @@
 <bean id="graduate" parent="student" class="com.hsp.inherit.Graduate">
 	<!--如果自己配置属性name，age，则会替换从父对象继承的数据-->
 	<property name="name" value="小明"/>
+	<property name="age" value="22"/>
 
 	<property name="degree" value="学士"/>
 

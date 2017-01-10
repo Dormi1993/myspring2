@@ -9,7 +9,7 @@
 
 <bean id="changeLetter" class="com.hsp.inter.UpperLettter">
 <property name="str">
-<value>abcef</value>
+<value>abDJJcef</value>
 </property>
 
 </bean>

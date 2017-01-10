@@ -25,13 +25,16 @@ public class Test {
 		UserService us= (UserService) ac.getBean("hsp");
 		us.sayHello();*/
 
+		//单态
 		((UserService) ApplicationContextUtil.getApplicationContext()
 				.getBean("hsp")).sayHello();
 
 
 		//从ac【代表applicationContext容器】中
-//		BybService bybService = (BybService) ac.getBean("bybService");
-//		bybService.sayBye();
+/*		ApplicationContext ac=new ClassPathXmlApplicationContext("applicationContext.xml");//双引号中的.xml名
+
+		BybService bybService = (BybService) ac.getBean("bybService");
+		bybService.sayBye();*/
 
 
 

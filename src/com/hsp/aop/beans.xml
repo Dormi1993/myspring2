@@ -30,6 +30,7 @@
 	<property name="advice" ref="MyMethodBeforeAdvice"/>
 	<property name="mappedNames">
 		<list>
+			<!--表面是哪些方法-->
 			<value>sayHello</value>
 		</list>
 	</property>
